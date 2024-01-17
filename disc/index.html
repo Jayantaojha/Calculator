@@ -11,56 +11,56 @@
 </head>
 
 
-<body class="flex flex-col justify-start h-[90vh] w-[100vw] box-border">
+<body class="flex flex-col justify-start h-[100vh] w-[100vw] dark:bg-black bg-white">
 
     <!-- header section -->
-    <header class="flex justify-between text-lg h-[10vh] pt-4 pl-4 pr-4">
-        <div id="setting" class="pt-1 mb-4 pb-1 pl-2 pr-2 bg-[#f8f8f8] rounded-[50%] text-[#ff7c7d] cursor-pointer"><i class="fa-solid fa-gear text-[#525252]"></i></div>
-        <h2 class="text-[#525252] text-2xl font-semibold">Calculator</h2>
-        <div id="history" class="pt-1 mb-4 pb-1 pl-2 pr-2 bg-[#f8f8f8] rounded-[50%] text-[#ff7c7d] cursor-pointer"><i class="fa-solid fa-clock-rotate-left text-[#525252]"></i></div>
+    <header class="flex justify-between text-lg h-[10vh] pt-4 pl-4 pr-4 bg-white dark:bg-[#000000]">
+        <div id="setting" class="w-10 h-10 bg-[#f8f8f8] rounded-full flex justify-center items-center text-[#ff7c7d] cursor-pointer dark:bg-[#a5a5a5] dark:text-[#000]"><i class="fa-solid fa-gear text-[#525252]"></i></div>
+        <h2 class="text-[#525252] text-2xl font-semibold dark:text-[#f8f8f8] mt-1">Calculator</h2>
+        <div id="history" class="w-10 h-10 bg-[#f8f8f8] rounded-full flex justify-center items-center text-[#ff7c7d] cursor-pointer dark:bg-[#a5a5a5] dark:text-[#000]"><i class="fa-solid fa-clock-rotate-left text-[#525252]"></i></div>
     </header>
 
     <!-- output section -->
-    <div id="output" class="h-[28vh] flex flex-col justify-evenly">
+    <div id="output" class="h-[28vh] flex flex-col justify-evenly bg-white dark:bg-[#000000]">
         <p id="last-answer" class="text-end mr-5 text-base text-[#a5a5a5]"></p>
         <h1 id="answer" class="text-end mr-5 font-semibold text-4xl text-[#525252]"></h1>
     </div>
 
     <!-- input section -->
-    <div id="inputs-wrapper" class="h-[50vh] rounded-t-3xl p-5 shadow-[0_-10px_10px_-10px_rgba(0,0,0,0.3)] flex flex-col gap-y-4">
+    <div id="inputs-wrapper" class="h-[50vh] rounded-t-3xl p-5 bg-white shadow-[0_-10px_10px_-10px_rgba(0,0,0,0.3)] flex flex-col gap-y-4 dark:bg-[#000000]  dark:shadow-[0_-10px_5px_-10px_white]">
         
         <div id="row1" class="flex justify-between text-xl">
-            <button id="clear-all" class="pt-3 pb-3 pl-5 pr-5 bg-[#f8f8f8] rounded-[50%] text-[#ff7c7d] font-semibold">C</button>
-            <button id="delete" class="pt-3 pb-3 pl-4 pr-5 bg-[#f8f8f8] rounded-[50%] text-[#525252]"><i class="fa-solid fa-delete-left"></i></button>
-            <button id="percent" class="pt-3 pb-3 pl-5 pr-5 bg-[#f8f8f8] rounded-[50%] text-[#60e7b1]"><i class="fa-solid fa-percent"></i></button>
-            <button id="divide" class="pt-3 pb-3 pl-5 pr-5 bg-[#f8f8f8] rounded-[50%] text-[#60e7b1]"><i class="fa-solid fa-divide"></i></button>
+            <button id="clear-all" class="pt-3 pb-3 pl-5 pr-5 bg-[#f8f8f8] rounded-[50%] text-[#ff7c7d] font-semibold dark:bg-[#a5a5a5] dark:text-[#000]">C</button>
+            <button id="delete" class="pt-3 pb-3 pl-4 pr-5 bg-[#f8f8f8] rounded-[50%] text-[#525252] dark:bg-[#a5a5a5] dark:text-[#000]"><i class="fa-solid fa-delete-left"></i></button>
+            <button id="percent" class="pt-3 pb-3 pl-5 pr-5 bg-[#f8f8f8] rounded-[50%] text-[#60e7b1] dark:bg-[#a5a5a5] dark:text-[#000]"><i class="fa-solid fa-percent"></i></button>
+            <button id="divide" class="pt-3 pb-3 pl-5 pr-5 bg-[#f8f8f8] rounded-[50%] text-[#60e7b1] dark:bg-[#60e7b1] dark:text-[#525252]"><i class="fa-solid fa-divide"></i></button>
         </div>
 
         <div id="row2" class="flex justify-between text-xl">
-            <button class="pt-3 pb-3 pl-5 pr-5 bg-[#f8f8f8] rounded-[50%]">7</button>
-            <button class="pt-3 pb-3 pl-5 pr-5 bg-[#f8f8f8] rounded-[50%]">8</button>
-            <button class="pt-3 pb-3 pl-5 pr-5 bg-[#f8f8f8] rounded-[50%]">9</button>
-            <button id="multiply" class="pt-3 pb-3 pl-5 pr-5 bg-[#f8f8f8] rounded-[50%] text-[#60e7b1]"><i class="fa-solid fa-xmark"></i></button>
+            <button class="pt-3 pb-3 pl-5 pr-5 bg-[#f8f8f8] rounded-[50%] dark:bg-[#313131] dark:text-white">7</button>
+            <button class="pt-3 pb-3 pl-5 pr-5 bg-[#f8f8f8] rounded-[50%] dark:bg-[#313131] dark:text-white">8</button>
+            <button class="pt-3 pb-3 pl-5 pr-5 bg-[#f8f8f8] rounded-[50%] dark:bg-[#313131] dark:text-white">9</button>
+            <button id="multiply" class="pt-3 pb-3 pl-5 pr-5 bg-[#f8f8f8] rounded-[50%] text-[#60e7b1] dark:bg-[#60e7b1] dark:text-[#525252]"><i class="fa-solid fa-xmark"></i></button>
         </div>
 
         <div id="row3" class="flex justify-between text-xl">
-            <button class="pt-3 pb-3 pl-5 pr-5 bg-[#f8f8f8] rounded-[50%]">4</button>
-            <button class="pt-3 pb-3 pl-5 pr-5 bg-[#f8f8f8] rounded-[50%]">5</button>
-            <button class="pt-3 pb-3 pl-5 pr-5 bg-[#f8f8f8] rounded-[50%]">6</button>
-            <button id="minus" class="pt-3 pb-3 pl-5 pr-5 bg-[#f8f8f8] rounded-[50%] text-[#60e7b1]"><i class="fa-solid fa-minus"></i></button>
+            <button class="pt-3 pb-3 pl-5 pr-5 bg-[#f8f8f8] rounded-[50%] dark:bg-[#313131] dark:text-white">4</button>
+            <button class="pt-3 pb-3 pl-5 pr-5 bg-[#f8f8f8] rounded-[50%] dark:bg-[#313131] dark:text-white">5</button>
+            <button class="pt-3 pb-3 pl-5 pr-5 bg-[#f8f8f8] rounded-[50%] dark:bg-[#313131] dark:text-white">6</button>
+            <button id="minus" class="pt-3 pb-3 pl-5 pr-5 bg-[#f8f8f8] rounded-[50%] text-[#60e7b1] dark:bg-[#60e7b1] dark:text-[#525252]"><i class="fa-solid fa-minus"></i></button>
         </div>
 
         <div id="row4" class="flex justify-between text-xl">
-            <button class="pt-3 pb-3 pl-5 pr-5 bg-[#f8f8f8] rounded-[50%]">1</button>
-            <button class="pt-3 pb-3 pl-5 pr-5 bg-[#f8f8f8] rounded-[50%]">2</button>
-            <button class="pt-3 pb-3 pl-5 pr-5 bg-[#f8f8f8] rounded-[50%]">3</button>
-            <button id="plus" class="pt-3 pb-3 pl-5 pr-5 bg-[#f8f8f8] rounded-[50%] text-[#60e7b1]"><i class="fa-solid fa-plus"></i></button>
+            <button class="pt-3 pb-3 pl-5 pr-5 bg-[#f8f8f8] rounded-[50%] dark:bg-[#313131] dark:text-white">1</button>
+            <button class="pt-3 pb-3 pl-5 pr-5 bg-[#f8f8f8] rounded-[50%] dark:bg-[#313131] dark:text-white">2</button>
+            <button class="pt-3 pb-3 pl-5 pr-5 bg-[#f8f8f8] rounded-[50%] dark:bg-[#313131] dark:text-white">3</button>
+            <button id="plus" class="pt-3 pb-3 pl-5 pr-5 bg-[#f8f8f8] rounded-[50%] text-[#60e7b1] dark:bg-[#60e7b1] dark:text-[#525252]"><i class="fa-solid fa-plus"></i></button>
         </div>
 
         <div id="row5" class="flex justify-between text-xl">
-            <button class="pt-3 pb-3 pl-5 pr-5 bg-[#f8f8f8] rounded-[50%]">0</button>
-            <button class="pt-3 pb-3 pl-6 pr-6 bg-[#f8f8f8] rounded-[50%] mr-11 ml-11">.</button>
-            <button id="equal" class="pt-3 pb-3 pl-5 pr-5 rounded-2xl flex-grow bg-[#60e7b1] text-white text-center"><i class="fa-solid fa-equals"></i></button>
+            <button class="pt-3 pb-3 pl-5 pr-5 bg-[#f8f8f8] rounded-[50%] dark:bg-[#313131] dark:text-white">0</button>
+            <button class="pt-3 pb-3 pl-6 pr-6 bg-[#f8f8f8] rounded-[50%] mr-11 ml-11 dark:bg-[#313131] dark:text-white">.</button>
+            <button id="equal" class="pt-3 pb-3 pl-5 pr-5 rounded-2xl flex-grow bg-[#60e7b1] text-white text-center dark:bg-[#60e7b1] dark:text-[#525252]"><i class="fa-solid fa-equals"></i></button>
         </div>
 
     </div>
