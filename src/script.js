@@ -112,10 +112,8 @@ setting.addEventListener('click', () => {
             // for dark mode
             if (modeCounter) {
                 div.innerHTML = `<p style="text-align: center; font-size: 12px; color: #525252;">Light Mode</p>`;
-                // body.style.backgroundColor = "#0a2538";
                 body.classList.add('dark');
-                body.classList.add('bg-black');
-                body.classList.remove('bg-white');
+                body.style.backgroundColor = "black";
                 
                 modeCounter = false;
             }
@@ -124,8 +122,7 @@ setting.addEventListener('click', () => {
                 div.innerHTML = `<p style="text-align: center; font-size: 12px; color: #525252;">Dark Mode</p>`;
                 // body.style.backgroundColor = "white";
                 body.classList.remove('dark');
-                body.classList.remove('bg-dark');
-                body.classList.add('bg-white');
+                body.style.backgroundColor = "white";
 
                 modeCounter = true;
             }
