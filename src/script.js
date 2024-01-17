@@ -114,11 +114,11 @@ setting.addEventListener('click', () => {
                 div.innerHTML = `<p style="text-align: center; font-size: 12px; color: #525252;">Light Mode</p>`;
                 body.classList.add('dark');
                 body.style.backgroundColor = "black";
-                
+
                 modeCounter = false;
             }
             // for light mode
-            else{
+            else {
                 div.innerHTML = `<p style="text-align: center; font-size: 12px; color: #525252;">Dark Mode</p>`;
                 // body.style.backgroundColor = "white";
                 body.classList.remove('dark');
@@ -138,4 +138,28 @@ setting.addEventListener('click', () => {
         setting.firstChild.classList.add("fa-gear");
         clickTime = 0;
     }
+})
+
+
+window.addEventListener('load', () => {
+    const messageDiv = document.createElement('div');
+    messageDiv.style.position = 'absolute';
+    messageDiv.style.height = "5vh";
+    messageDiv.style.width = "60vw";
+    messageDiv.style.top = "10vh";
+    messageDiv.style.left = "20vw";
+    // messageDiv.style.backgroundColor = "yellow";
+    messageDiv.style.background = 'linear-gradient(45deg, #ffd700, #ffeb3b)';
+    messageDiv.style.borderRadius = "6px";
+    messageDiv.style.display = "flex";
+    messageDiv.style.justifyContent = "center";
+    messageDiv.style.alignItems = "center";
+    messageDiv.style.boxShadow = "1px 2px 10px grey";
+    messageDiv.innerHTML = `<p style="text-align: center; font-size: 12px; color: #525252;">Dark Mode is available!</p>`;
+
+    body.appendChild(messageDiv);
+
+    setTimeout(() => {
+        body.removeChild(messageDiv);
+    }, 5000)
 })
