@@ -80,11 +80,8 @@ buttonsArr.forEach((button) => {
 // div for dark mode
 const div = document.createElement('div');
 div.style.height = "5vh";
-div.style.width = "28vw";
 div.style.backgroundColor = "#f8f8f8";
 div.style.position = "absolute";
-div.style.top = "9vh";
-div.style.left = "5vw";
 div.style.borderRadius = "6px";
 div.style.display = "flex";
 div.style.justifyContent = "center";
@@ -93,6 +90,17 @@ div.style.boxShadow = "1px 2px 10px grey";
 div.style.cursor = "pointer";
 div.innerHTML = `<p style="text-align: center; font-size: 12px; color: #525252;">Dark Mode</p>`;
 
+
+if (screen.width > 600) {
+    div.style.width = "12vw";
+    div.style.top = "10vh";
+    div.style.left = "27vw";
+}
+else {
+    div.style.width = "28vw";
+    div.style.top = "9vh";
+    div.style.left = "5vw";
+}
 
 
 let clickTime = 0;
@@ -145,10 +153,18 @@ window.addEventListener('load', () => {
     const messageDiv = document.createElement('div');
     messageDiv.style.position = 'absolute';
     messageDiv.style.height = "5vh";
-    messageDiv.style.width = "60vw";
+    // messageDiv.style.width = "60vw";
+
+    if (screen.width > 600) {
+        messageDiv.style.width = "20vw";
+        messageDiv.style.left = "40vw";
+    }
+    else {
+        messageDiv.style.width = "60vw";
+        messageDiv.style.left = "20vw";
+    }
+
     messageDiv.style.top = "10vh";
-    messageDiv.style.left = "20vw";
-    // messageDiv.style.backgroundColor = "yellow";
     messageDiv.style.background = 'linear-gradient(45deg, #ffd700, #ffeb3b)';
     messageDiv.style.borderRadius = "6px";
     messageDiv.style.display = "flex";
